@@ -1,0 +1,157 @@
+.home {
+    background-image: url(../assets/img/banner2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+
+    @include break(desktop-small) {
+        height: 100vh;
+    }
+
+    @include break(smartphone-small) {
+        height: 150vh;
+    }
+
+    @include break(smartphone-medium) {
+        height: 120vh;
+    }
+
+    @include break(smartphone-large) {
+        height: 95vh;
+    }
+
+    @include break(tablet) {
+        height: 120vh;
+    }
+
+    @include break(desktop-medium) {
+        height: 100vh;
+    }
+
+    &__myimage {
+        &>img {
+            border-radius: 50%;
+            max-width: 230px;
+            padding: 2.5rem;
+        }
+    }
+
+    &__link {
+        padding: 15px 40px 15px 40px;
+        background: #dd0000;
+        margin-bottom: 25px;
+    }
+
+
+    &__about-me {
+        display: flex;
+        justify-content: center;
+
+        &>p {
+            flex-basis: 50%;
+            background-color: rgba(238, 238, 238, 0.7);
+            border-radius: 25px;
+            padding: 1rem;
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 25px;
+
+            @include break(tablet-large) {
+                font-size: 25px;
+            }
+        }
+
+        &>p:hover {
+            background-color: rgba(238, 238, 238, 0.8);
+        }
+    }
+
+    &__aboutall {
+        &>h1 {
+            color: #fff;
+            font-size: 3.5rem;
+        }
+
+    }
+
+    &__scrolldown {
+        height: 70px;
+        width: 50px;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 50%;
+        bottom: 6%;
+        border-radius: 50px;
+        cursor: pointer;
+        transform: translateX(-50%);
+        // transform: translateY(-20%);
+
+        @include break(smartphone) {
+            left: 45%;
+        }
+
+        @include break(smartphone-large) {
+            left: 50%;
+        }
+
+        @include break(desktop-small) {
+            left: 50%;
+        }
+
+    }
+
+    &__scrolldown::before,
+    &__scrolldown::after {
+        content: ' ';
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        border: 2px solid #fff;
+        height: 10px;
+        width: 10px;
+        transform: translate(-50%, -100%) rotate(45deg);
+        border-top: transparent;
+        border-left: transparent;
+        animation: scroll-down-animation 1s ease-in-out infinite;
+    }
+
+    &__scrolldown::after {
+        top: 20%;
+        animation-delay: .3s
+    }
+
+    @keyframes scroll-down-animation {
+        0% {
+            opacity: 0;
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        60% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            top: 90%;
+        }
+    }
+
+
+
+    @keyframes animacja {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets/img/my_photo.jpg
+Disallow: /assets/img/banner2.jpg
+Disallow: /assets/img/skills/*

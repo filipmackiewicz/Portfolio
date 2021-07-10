@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'skills';
+@import 'education';
+@import 'experience';
+@import 'footer';
+@import 'projects';
+
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 25px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
